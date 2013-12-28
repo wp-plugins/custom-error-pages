@@ -3,7 +3,7 @@ Contributors: jesin
 Tags: error, 401, 403, 404, errors, http, htaccess
 Requires at least: 3.3.0
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,16 @@ This tells caching plugins like W3 Total Cache and WP Super Cache not to cache t
 
 = Does this plugin automatically edit the .htaccess or nginx.conf file? =
 No it doesn't. You have to manually edit it and add the necessary configuration specified in the plugin's option page.
+
+== Changelog ==
+
+= 1.1 =
+* Fixed a bug that displayed the thumbnail of Post ID 1
+* Reduced repetitive code with inheritance
+* Compatibility check with WordPress 3.8
+
+= 1.0 =
+* Initial version
 
 == Screenshots ==
 1. Modify the title and content values of your custom error page from Settings > Custom Error Pages

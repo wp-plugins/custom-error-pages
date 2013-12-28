@@ -1,19 +1,11 @@
 <?php
 if( !class_exists( 'Custom_Error_Pages_Admin' ) )
 {
-	class Custom_Error_Pages_Admin
+	class Custom_Error_Pages_Admin extends Custom_Error_Pages_Plugin
 	{
-		var $options;
-		var $slug;
-		var $basename;
-
-		function __construct( $args )
+		function __construct( )
 		{
-			$this->options = $args['options'];
-			$this->slug = $args['slug'];
-			$this->basename = $args['basename'];
-			$this->defaults = $args['defaults'];
-
+			parent::__construct();
 			add_action( 'admin_menu' , array( $this, 'plugin_menu' ) );
 			add_action( 'admin_init' , array( $this, 'plugin_settings' ) );
 		}
@@ -139,11 +131,5 @@ error_page	401 = <?php echo str_replace( $_SERVER['DOCUMENT_ROOT'], '', get_home
 	}
 
 	//Admin options page begins here
-	$custom_error_pages_admin = new Custom_Error_Pages_Admin(
-								array( 	'basename' => $custom_error_pages_plugin->basename,
-										'slug' => $custom_error_pages_plugin->slug,
-										'options' => $custom_error_pages_plugin->options,
-										'defaults' => $custom_error_pages_plugin->defaults
-									)
-								);
+	$custom_error_pages_admin = new Custom_Error_Pages_Admin;
 }
