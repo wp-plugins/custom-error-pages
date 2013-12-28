@@ -5,7 +5,7 @@ Plugin URI: http://jesin.tk/wordpress-plugins/custom-error-pages/
 Description: Create custom 401 and 403 error pages with any WordPress theme without writing a single line of code, set it up and forget it.
 Author: Jesin
 Author URI: http://jesin.tk
-Version: 1.0
+Version: 1.1
 */
 
 if( !class_exists( 'Create_Custom_Error_Pages' ) && !class_exists( 'Custom_Error_Pages_Plugin' ) )
@@ -95,7 +95,7 @@ if( !class_exists( 'Create_Custom_Error_Pages' ) && !class_exists( 'Custom_Error
 			if( $wp_query->post_count == 0 )
 			{
 				$post = new stdClass;
-				$post->ID = -1;
+				$post->ID = 0;
 				$post->post_author = 1;
 				$post->post_date = current_time( 'mysql' );
 				$post->post_date_gmt = current_time( 'mysql', 1 );
